@@ -7,8 +7,10 @@ import gzip # import library to work with .gz extension
 
 
 def read_file(fname):
-    ''' Function to read a file content '''
-    with gzip.open(fname, 'r') as file:
+    ''' Function to read a file content and write the amount of agents (and their requests) 
+    into the file statistics.txt'''
+
+    with gzip.open(fname, 'r') as file, open('statistics.txt', 'w') as otpt:
 
         agents = {}
 
@@ -19,7 +21,7 @@ def read_file(fname):
                 agents[agent] = agents.get(agent, 0) + 1
 
         for i, key in enumerate(agents):
-            print(f'{i+1}. Agent: {key} has {agents[key]} request(s)')
+            otpt.write(f'{i+1}. Agent: {key} has {agents[key]} request(s)\n')
 
 
 if __name__ == "__main__":

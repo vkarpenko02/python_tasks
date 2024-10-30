@@ -10,14 +10,17 @@ class Task:
     def get_minimum(self):
         ''' Function returns the minimum '''
         return f'Min value: {min(self.list_of_integers)}'
+
     @property
     def get_maximum(self):
         ''' Function returns the maximum '''
         return f'Max value: {max(self.list_of_integers)}'
+
     @property
     def get_tuple(self):
         ''' Function returns tuple'''
         return tuple(self.list_of_integers)
+
 
 if __name__ == "__main__":
     try:

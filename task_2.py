@@ -22,7 +22,8 @@ class Task:
 if __name__ == "__main__":
     try:
         # make a list from inputed numbers
-        lst = [int(x) for x in input('Enter numbers separated by spaces: ').split()] # if user inputed not a number, ValueError will occur
+        # if user inputed not a number, ValueError will occur
+        lst = [int(x) for x in input('Enter numbers separated by spaces: ').split()]
 
         # if list is not empty next code will be executed
         if lst:

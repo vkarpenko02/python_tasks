@@ -6,7 +6,7 @@ the amount of user agents and the amount of requests from each of them '''
 import gzip # import library to work with .gz extension
 
 
-def readFile(fname):
+def read_file(fname):
     ''' Function to read a file content '''
     with gzip.open(fname, 'r') as file:
 
@@ -25,6 +25,6 @@ def readFile(fname):
 if __name__ == "__main__":
     try:
         log_filename = input()
-        readFile(log_filename)
+        read_file(log_filename)
     except FileNotFoundError:
         print('There is no such file')

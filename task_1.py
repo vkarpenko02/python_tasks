@@ -19,7 +19,7 @@ def get_file_extension(fname):
 
     #  checking if the input is correct
     try:
-        if fname[0] == '.' or len(ext) != 2:
+        if fname[0] == '.' or len(ext) < 2:
             raise InvalidInput('Invalid Input')
     except InvalidInput as err:
         return err

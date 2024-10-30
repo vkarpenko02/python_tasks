@@ -10,7 +10,7 @@ def read_file(fname):
     ''' Function to read a file content and write the amount of agents (and their requests) 
     into the file statistics.txt'''
 
-    with gzip.open(fname, 'r') as file, open('statistics.txt', 'w') as otpt:
+    with gzip.open(fname, 'r') as file, open('statistics.txt', 'w', encoding='utf-8') as otpt:
 
         agents = {}
 

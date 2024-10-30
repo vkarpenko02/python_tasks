@@ -32,7 +32,7 @@ def read_file(fname):
 
 if __name__ == "__main__":
     try:
-        log_filename = input()
+        log_filename = input("Enter filename: ")
         read_file(log_filename)
     except FileNotFoundError:
         print('There is no such file')

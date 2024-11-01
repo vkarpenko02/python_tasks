@@ -35,4 +35,7 @@ def get_file_extension(fname):
 
 if __name__ == "__main__":
     filename = input("Enter the file name: ")
-    print(get_file_extension(filename))
+    if len(filename) > 0:
+        print(get_file_extension(filename))
+    else:
+        print('Empty input')

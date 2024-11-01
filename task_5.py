@@ -24,8 +24,9 @@ if args.distro:
 
 if args.memory:
     sys_mem = psutil.virtual_memory()
-    print(f'Total memory: {sys_mem.total / (1024**3):.2f} GB, used memory: \
-          {sys_mem.used / (1024**3):.2f} GB, free memory: {sys_mem.free / (1024**3):.2f} GB')
+    print(f'Total memory: {sys_mem.total / (1024**3):>8.2f} GB, '
+          f'used memory: {sys_mem.used / (1024**3):>8.2f} GB, '
+          f'free memory: {sys_mem.free / (1024**3):>8.2f} GB')
 
 if args.cpu:
     print(f'Model: {platform.processor()}')
@@ -38,8 +39,10 @@ if args.user:
 
 if args.load:
     loads = os.getloadavg()
-    print(f'The load average over the last 1 minute: {round(loads[0], 3)}, \
-          5 minutes: {round(loads[1], 3)}, 15 minutes: {round(loads[2], 3)}')
+    print(f'The load average over the last:\n'
+          f'  1 minute: {round(loads[0], 3)}\n'
+          f'  5 minutes: {round(loads[1], 3)}\n'
+          f' 15 minutes: {round(loads[2], 3)}')
 
 if args.ip:
     conn = http.client.HTTPConnection("ifconfig.me")
